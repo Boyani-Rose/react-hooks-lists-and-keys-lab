@@ -3,15 +3,23 @@ import NavBar from "./NavBar";
 import Home from "./Home";
 import About from "./About";
 import ProjectList from "./ProjectList";
-import user from "../data/user";
 
+import projects from "../data/projects";
+ 
+ const aboutData = {
+   github: "https://github.com/Dean14692-prog/react-hooks-lists-and-keys-lab",
+   linkedin: "https://www.linkedin.com/feed/",
+ };
+ 
 function App() {
+  const username = "Rose Boyani Momanyi";  
+   const city = "Nairobi";
   return (
     <div>
       <NavBar />
-      <Home username={user.name} city={user.city} color={user.color} />
-      <About bio={user.bio} links={user.links} />
-      <ProjectList projects={user.projects} />
+      <Home color="blue" username={username} city={city} />
+       <About about={aboutData} />
+       <ProjectList projects={projects} />
     </div>
   );
 }
